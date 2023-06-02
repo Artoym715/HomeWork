@@ -5,7 +5,7 @@ function send(event) {
 	event.preventDefault();
 	let massage = document.getElementById("massage").value;
 	(async () => {
-		var response = await fetch('chat.php?message=' + message);
+		var response = await fetch('chat.php?massage=' + massage);
 		var answer = await response.text();
 
 	}
