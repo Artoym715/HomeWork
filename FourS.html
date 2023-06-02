@@ -35,7 +35,7 @@
 							<a class="nav-link" aria-current="page" href="index.html">Главная</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">3 Семинар</a>
+							<a class="nav-link active" aria-current="page" href="#">4 Семинар</a>
 						</li>
 					</ul>
 				</div>
@@ -55,22 +55,31 @@
 			</div>
 			<div class="col-12 col-md-12">
 				<h4>Массив с данными для блока «Опыт работы»</h4>
-				<form id="formHealth">
-					<div class="row g-3">
-						<div class="col">
-							<input required type="text" class="form-control" id="rost" placeholder="Введите рост, м"
-								aria-label="Рост">
-						</div>
-						<div class="col">
-							<input required type="text" class="form-control" id="massa" placeholder="Введите вес, кг"
-								aria-label="Вес">
-						</div>
-						<div class="col">
-							<button type="submit" class="btn btn-primary">Результат</button>
-							<button type="button" id="clear1" class="btn btn-danger">Очистить</button>
-						</div>
-					</div>
-				</form>
+				<div class="alert alert-dark" role="alert">
+					<h4>Код:</h4>
+					<code>
+						$work_exper = [<br/>
+  								0 => [<br/>
+    									'work_name' => 'Веб-программист',<br/>
+    									'work_date' => 'март 2015 - ',<br/>
+    									'work_text' => 'Работаю сейчас. Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.'<br/>
+  										],<br/>
+  								1 => [<br/>
+    									'work_name' => 'Веб-программист',<br/>
+    									'work_date' => 'Март 2012 - декабрь 2014',<br/>
+   									'work_text' => 'Моя вторая работа. Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.'<br/>
+  										],<br/>
+  								2 => [<br/>
+    									'work_name' => 'Веб-программист',<br/>
+    									'work_date' => 'Июнь 2010 - март 2012',<br/>
+    									'work_text' => 'Мой первый опыт. Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.'<br/>
+  										]<br/>
+								];
+					</code>
+				</div>
+				<h4>Результат:</h4>
+				<a href="/about.php" target="_blank" class="btn btn-primary">Просмотр</a>
+
 				<div class="alert mt-3" id="result" role="alert">
 				</div>
 			</div>
@@ -85,21 +94,39 @@
 			</div>
 			<div class="col-12 col-md-12">
 				<h4>БД состоящая из 1 таблицы</h4>
-				<form id="formName">
-					<div class="row g-3">
-						<div class="col">
-							<input required type="text" class="form-control" id="name" placeholder="Введите ваше имя"
-								aria-label="Имя">
-						</div>
-						<div class="col">
-							<button type="submit" class="btn btn-primary">Результат</button>
-							<button type="button" id="clear" class="btn btn-danger">Очистить</button>
-						</div>
-					</div>
-				</form>
-				<div class="alert mt-3" id="resultName" role="alert">
+				<img src="img/resulSQL.png" width="1300px" height="508px" alt="БД состоящая из 1 таблицы">
+			</div>
+			<div class="col-12 col-md-12 mt-4">
+				<div class="alert alert-warning" role="alert">
+					<strong>Задача:</strong>
+					<ul>
+						<li>Добавьте в чат имя пользователя, чтобы было видно кто написал сообщение, поле с именем не
+							очищайте.</li>
+					</ul>
 				</div>
 			</div>
+			<div class="col-12 col-md-12">
+				<h4>Чат</h4>
+				<form id="formChat">
+					<div class="row g-3">
+						<div class="col">
+							<input required type="text" class="form-control" id="massage" placeholder="Введите сообщение..."
+								aria-label="Сообщение">
+						</div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary">Отправить</button>
+							<button type="button" id="clear2" class="btn btn-danger">Очистить</button>
+						</div>
+					</div>
+					<div class="alert alert-secondary mt-3" id="chat" role="alert">
+						<h6>Сообщения....</h6>
+						<ul>
+							<li id="chat"></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
 	</main>
 	<footer class="container footer">
 		<div class="row">
@@ -122,8 +149,6 @@
 	<!-- jQuery, and Bootstrap JS -->
 	<script src="lib/bootstrap-5.2.3/js/bootstrap.min.js"></script>
 	<script src="lib/bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
-	<script src="js/Calchealth.js"></script>
-	<script src="js/Hello.js"></script>
 	<script src="js/chat.js"></script>
 </body>
 
